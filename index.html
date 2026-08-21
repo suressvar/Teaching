@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build Your First Website with Lovable AI | First-Year Student Workshop</title>
+  <meta name="description" content="A complete mini-course and live teaching aid for first-year students to build a personal portfolio website with Lovable AI — zero coding required." />
+
+  <!-- Favicon placeholder & Open Graph Meta Tags -->
+  <link rel="icon" href="data:," />
+  <meta property="og:title" content="Build Your First Website with Lovable AI | First-Year Student Workshop" />
+  <meta property="og:description" content="A complete mini-course and live teaching aid for first-year students to build a personal portfolio website with Lovable AI — zero coding required." />
+  <meta property="og:type" content="website" />
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP & ScrollTrigger via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Application Logic -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- Skip to Content Link -->
+  <a href="#home" class="skip-link">Skip to main content</a>
+
+  <!-- ======================================================================
+       STICKY TOP NAVBAR WITH SCROLL-SPY & MOBILE HAMBURGER
+       ====================================================================== -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand" aria-label="Lovable Workshop Home">
+        <span class="brand-badge">✨</span>
+        <span class="brand-text">Lovable <span>Workshop</span></span>
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Desktop Nav & Mobile Drawer -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">What is Lovable</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#steps" class="nav-link">Step-by-Step</a></li>
+          <li><a href="#prompt" class="nav-link">Master Prompt</a></li>
+          <li><a href="#tips" class="nav-link">Tips & Mistakes</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#get-started" class="nav-link nav-cta-link">Get Started <span aria-hidden="true">🚀</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         1. HERO SECTION (Home)
+         ====================================================================== -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-badge">
+          <span><span aria-hidden="true">🚀 </span>Zero Coding Experience Needed • First-Year Workshop</span>
+        </div>
+
+        <h1 class="hero-title">
+          Build Your First Website in Minutes — <br />
+          <span class="highlight">No Coding Needed</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Welcome! In today's session, you will turn your ideas and story into a real, responsive portfolio website on the internet using the power of Lovable AI.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#how-it-works" class="btn btn-primary">
+            <span>Start Learning</span>
+            <span aria-hidden="true">↓</span>
+          </a>
+          <a href="#prompt" class="btn btn-neo">
+            <span>Jump to Prompt</span>
+            <span aria-hidden="true">⚡</span>
+          </a>
+        </div>
+
+        <!-- Micro visual flow -->
+        <div class="hero-visual-flow">
+          <div class="flow-step-item"><span aria-hidden="true">💡</span> Your Idea</div>
+          <div class="flow-arrow-dot" aria-hidden="true">➔</div>
+          <div class="flow-step-item"><span aria-hidden="true">🤖</span> Lovable AI</div>
+          <div class="flow-arrow-dot" aria-hidden="true">➔</div>
+          <div class="flow-step-item"><span aria-hidden="true">🌐</span> Live Portfolio</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. WHAT IS LOVABLE AI
+         ====================================================================== -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Introduction</span>
+          <h2 class="section-title">What is Lovable AI?</h2>
+          <p class="section-intro">
+            Lovable AI is an intelligent full-stack web builder that translates plain conversational English into clean, production-ready website code in seconds.
+          </p>
+        </div>
+
+        <div class="what-grid">
+          <!-- Column 1: Traditional Way -->
+          <div class="comparison-card trad">
+            <span class="comp-badge">Traditional Way</span>
+            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.6rem; color:var(--primary-navy);">Weeks of Learning Code</h3>
+            <p style="font-size:0.92rem; color:var(--text-muted); line-height:1.6;">
+              Requires studying HTML syntax, CSS flexbox/grid, JavaScript logic, responsive frameworks, and deployment servers before launching anything.
+            </p>
+          </div>
+
+          <!-- Column 2: The Lovable AI Way -->
+          <div class="comparison-card lovable">
+            <span class="comp-badge">The Lovable AI Way</span>
+            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.6rem; color:var(--primary-navy);">Describe It & Get It Instantly</h3>
+            <p style="font-size:0.92rem; color:var(--text-muted); line-height:1.6;">
+              You type what you want like sending a text message. AI instantly designs, codes, tests, and deploys a live website for you in seconds.
+            </p>
+          </div>
+
+          <!-- Column 3: Why this matters callout -->
+          <div class="neo-card why-matters-card">
+            <div class="callout-pill">
+              <span aria-hidden="true">🌟</span> Why this matters
+            </div>
+            <h3 style="font-size:1.15rem; color:var(--primary-navy); font-weight:800; margin-bottom:0.2rem;">
+              Built for First-Years
+            </h3>
+            <p style="color:var(--text-main); font-size:0.92rem; line-height:1.6;">
+              A live personal portfolio makes you stand out immediately for internships, student clubs, and research. Lovable lets you focus on <strong>your story</strong> while AI handles the code.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. HOW IT WORKS (Concept Mental Model)
+         ====================================================================== -->
+    <section id="how-it-works" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Mental Model</span>
+          <h2 class="section-title">How It Works (The 4 Steps)</h2>
+          <p class="section-intro">
+            Understand the core cycle before diving into the detailed step-by-step guide.
+          </p>
+        </div>
+
+        <div class="how-grid">
+          <div class="how-card">
+            <span class="how-card-num">01</span>
+            <div class="how-icon-box"><span aria-hidden="true">✍️</span></div>
+            <h3>1. Describe in English</h3>
+            <p>You provide a structured text "prompt" explaining what your website should look like and what content it contains.</p>
+          </div>
+
+          <div class="how-card">
+            <span class="how-card-num">02</span>
+            <div class="how-icon-box"><span aria-hidden="true">🧠</span></div>
+            <h3>2. AI Codes It</h3>
+            <p>Lovable reads your prompt, creates components, applies styling, and writes real, modern web code.</p>
+          </div>
+
+          <div class="how-card">
+            <span class="how-card-num">03</span>
+            <div class="how-icon-box"><span aria-hidden="true">👀</span></div>
+            <h3>3. Live Instant Preview</h3>
+            <p>Within seconds, a fully interactive preview appears right in your browser for both mobile and desktop.</p>
+          </div>
+
+          <div class="how-card">
+            <span class="how-card-num">04</span>
+            <div class="how-icon-box"><span aria-hidden="true">✨</span></div>
+            <h3>4. Refine with Chat</h3>
+            <p>Need a tweak? Ask for one change at a time (like "change the header color") and watch it update live.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. STEP-BY-STEP GUIDE (Expanded 10 Steps with Progress Line)
+         ====================================================================== -->
+    <section id="steps" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Hands-On Guide</span>
+          <h2 class="section-title">Step-by-Step Workshop Walkthrough</h2>
+          <p class="section-intro">
+            Follow these 10 steps during our live class session. Look at the animated side indicator as we progress!
+          </p>
+        </div>
+
+        <div class="guide-wrapper">
+          <!-- Animated Progress Line -->
+          <div class="guide-progress-bar">
+            <div class="guide-progress-fill" id="stepProgressFill"></div>
+          </div>
+
+          <div class="steps-list">
+            <!-- Step 1 -->
+            <article class="step-card" id="step1">
+              <div class="step-badge">1</div>
+              <div class="step-header">
+                <h3 class="step-title">Create a Free Lovable Account & Start Project</h3>
+                <span style="font-size:1.4rem;" aria-hidden="true">🌐</span>
+              </div>
+              <p class="step-desc">
+                Visit <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" style="color:var(--primary-blue); font-weight:700; text-decoration:underline;">lovable.dev</a>, log in with your email or GitHub account, and click the <strong>"New Project"</strong> button.
+              </p>
+              <div class="step-why">
+                <span aria-hidden="true">💡</span>
+                <div><strong>Why this matters:</strong> Setting up your project workspace first gives the AI a clean canvas with modern defaults and instant live preview capabilities.</div>
+              </div>
+            </article>
+
+            <!-- Step 2 -->
+            <article class="step-card" id="step2">
+              <div class="step-badge">2</div>
+              <div class="step-header">
+                <h3 class="step-title">Understand the Prompt Template Fields</h3>
+                <span style="font-size:1.4rem;" aria-hidden="true">🧭</span>
+              </div>
+              <p class="step-desc">
+                Review the master prompt below: identify where your <strong>Name</strong>, <strong>Tagline/Role</strong>, <strong>Bio</strong>, <strong>Skills</strong>, <strong>Projects</strong>, and <strong>Contact links</strong> fit.
+              </p>
+              <div class="step-why">
+                <span aria-hidden="true">💡</span>
+                <div><strong>Why this matters:</strong> AI generates better output when you provide clear structured data categories rather than a vague one-line request.</div>
+              </div>
+            </article>
+
+            <!-- Step 3 -->
+            <article class="step-card" id="step3">
+              <div class="step-badge">3</div>
+              <div class="step-header">
+                <h3 class="step-title">Draft Your Details in a Notes App First</h3>
+                <span style="font-size:1.4rem;" aria-hidden="true">📝</span>
+              </div>
+              <p class="step-desc">
+                Open Notepad, Google Docs, or Apple Notes. Write 2-3 honest sentences about yourself and list 2-3 things you've made or are currently studying.
+              </p>
+              <div class="step-why">
+                <span aria-hidden="true">💡</span>
+                <div><strong>Why this matters:</strong> Writing your thoughts peacefully beforehand prevents rushing and avoids wasting AI credits on typo fixes.</div>
+              </div>
+            </article>
+
+            <!-- Step 4 -->
+            <article class="step-card" id="step4">
+              <div class="step-badge">4</div>
+              <div class="step-header">
+                <h3 class="step-title">Copy the Master Prompt from This Guide</h3>
+                <span style="font-size:1.4rem;" aria-hidden="true">📋</span>
+              </div>
+              <p class="step-desc">
+                Scroll down to the <strong>Master Prompt</strong> section. You can either fill in the live builder inputs to auto-fill or copy the standard template.
+              </p>
+              <div class="step-why">
+                <span aria-hidden="true">💡</span>
+                <div><strong>Why this matters:</strong> Our master prompt is pre-tuned with aesthetic styling, layout sections, and responsiveness instructions so you get a top-tier design on try #1.</div>
+              </div>
+            </article>
+
+            <!-- Step 5 -->
+            <article class="step-card" id="step5">
+              <div class="step-badge">5</div>
+              <div class="step-header">
+                <h3 class="step-title">Paste Your Filled Prompt into Lovable AI</h3>
+                <span style="font-size:1.4rem;" aria-hidden="true">📥</span>
+              </div>
+              <p class="step-desc">
+                Paste your customized prompt into the chat box at the bottom of your Lovable project workspace. Make sure no placeholder brackets like <code>[YOUR NAME]</code> were left empty!
+              </p>
+              <div class="step-why">
+                <span aria-hidden="true">💡</span>
+                <div><strong>Why this matters:</strong> Accurate prompt input ensures every card and headline displays your real information immediately.</div>
+              </div>
+            </article>
+
+            <!-- Step 6 -->
+            <article class="step-card" id="step6">
+              <div class="step-badge">6</div>
+              <div class="step-header">
+                <h3 class="step-title">Click Generate & Watch the Magic Happen</h3>
+                <span style="font-size:1.4rem;" aria-hidden="true">⚡</span>
+              </div>
+              <p class="step-desc">
+                Hit Enter or click <strong>Generate</strong>. Relax for 20-30 seconds while Lovable builds the HTML structure, styles the soft-UI cards, and renders your website.
+              </p>
+              <div class="step-why">
+                <span aria-hidden="true">💡</span>
+                <div><strong>Why this matters:</strong> Observing the live code generation helps you appreciate how AI orchestrates modern web components behind the scenes.</div>
+              </div>
+            </article>
+
+            <!-- Step 7 -->
+            <article class="step-card" id="step7">
+              <div class="step-badge">7</div>
+              <div class="step-header">
+                <h3 class="step-title">Review Your Site (Desktop & Mobile)</h3>
+                <span style="font-size:1.4rem;" aria-hidden="true">🔍</span>
+              </div>
+              <p class="step-desc">
+                Click around your new site. Test links, scroll through sections, and toggle between Desktop and Mobile preview icons in Lovable to check responsiveness.
+              </p>
+              <div class="step-why">
+                <span aria-hidden="true">💡</span>
+                <div><strong>Why this matters:</strong> Most recruiters and peers will view your portfolio on mobile phones, so verifying layout flow is essential.</div>
+              </div>
+            </article>
+
+            <!-- Step 8 -->
+            <article class="step-card" id="step8">
+              <div class="step-badge">8</div>
+              <div class="step-header">
+                <h3 class="step-title">Ask for ONE Small Refinement</h3>
+                <span style="font-size:1.4rem;" aria-hidden="true">🎨</span>
+              </div>
+              <p class="step-desc">
+                Want to tweak a color or text size? Type one specific instruction, e.g.: <em>"Make the hero name heading slightly larger and change the button background to deep navy."</em>
+              </p>
+              <div class="step-why">
+                <span aria-hidden="true">💡</span>
+                <div><strong>Why this matters:</strong> Single-instruction refinements prevent confusing the AI model and keep your site layout completely stable.</div>
+              </div>
+            </article>
+
+            <!-- Step 9 -->
+            <article class="step-card" id="step9">
+              <div class="step-badge">9</div>
+              <div class="step-header">
+                <h3 class="step-title">Click Publish to Get Your Live Link</h3>
+                <span style="font-size:1.4rem;" aria-hidden="true">🚀</span>
+              </div>
+              <p class="step-desc">
+                Once satisfied with your design, click the <strong>"Publish"</strong> button located at the top-right corner of Lovable to generate a public <code>.lovable.app</code> URL.
+              </p>
+              <div class="step-why">
+                <span aria-hidden="true">💡</span>
+                <div><strong>Why this matters:</strong> Publishing deploys your project to global edge servers so anyone in the world can visit it with zero hosting fees.</div>
+              </div>
+            </article>
+
+            <!-- Step 10 -->
+            <article class="step-card" id="step10">
+              <div class="step-badge">10</div>
+              <div class="step-header">
+                <h3 class="step-title">Share Your Portfolio with the Class & Beyond</h3>
+                <span style="font-size:1.4rem;" aria-hidden="true">🎉</span>
+              </div>
+              <p class="step-desc">
+                Copy your live link and drop it into our classroom shared doc/chat! Add it to your email signature, LinkedIn profile, or resume.
+              </p>
+              <div class="step-why">
+                <span aria-hidden="true">💡</span>
+                <div><strong>Why this matters:</strong> Sharing creates peer feedback, builds confidence, and gives you a tangible asset on day one of your college journey.</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. MASTER PROMPT (Interactive Builder & Breakdown)
+         ====================================================================== -->
+    <section id="prompt" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Master Prompt</span>
+          <h2 class="section-title">The Engineered Portfolio Prompt</h2>
+          <p class="section-intro">
+            A prompt is your set of instructions to the AI. Every single phrase in this prompt tells Lovable what layout, colors, and features to construct.
+          </p>
+        </div>
+
+        <!-- Optional Interactive Input Auto-Updater -->
+        <div class="prompt-builder-card">
+          <div class="builder-header">
+            <h3 style="font-size:1.15rem; font-weight:800; color:var(--primary-navy); margin-bottom:0.25rem;">
+              ✨ Quick Prompt Customizer (Optional)
+            </h3>
+            <p style="font-size:0.88rem; color:var(--text-muted);">
+              Type your details below to see the prompt text auto-update in real time, or copy the template directly!
+            </p>
+          </div>
+
+          <div class="builder-inputs-grid">
+            <div class="input-group">
+              <label for="inputName">Your Full Name</label>
+              <input type="text" id="inputName" class="input-field" placeholder="e.g. Alex Rivera" />
+            </div>
+            <div class="input-group">
+              <label for="inputRole">Your Role / Field</label>
+              <input type="text" id="inputRole" class="input-field" placeholder="e.g. First-Year Engineering Student" />
+            </div>
+            <div class="input-group">
+              <label for="inputBio">Short Bio (2-3 sentences)</label>
+              <input type="text" id="inputBio" class="input-field" placeholder="e.g. Passionate about robotics and modern web design." />
+            </div>
+            <div class="input-group">
+              <label for="inputSkills">Your Key Skills</label>
+              <input type="text" id="inputSkills" class="input-field" placeholder="e.g. Python basics, Problem Solving, UI Design" />
+            </div>
+            <div class="input-group">
+              <label for="inputProjects">Projects Summary</label>
+              <input type="text" id="inputProjects" class="input-field" placeholder="e.g. Smart Alarm Project, Personal Blog" />
+            </div>
+            <div class="input-group">
+              <label for="inputContact">Contact Info</label>
+              <input type="text" id="inputContact" class="input-field" placeholder="e.g. alex@university.edu | linkedin.com/in/alex" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Styled Prompt Code Box -->
+        <div class="prompt-box">
+          <div class="prompt-box-topbar">
+            <div class="window-dots" aria-hidden="true">
+              <span class="dot-r"></span>
+              <span class="dot-y"></span>
+              <span class="dot-g"></span>
+            </div>
+            <span class="prompt-box-title">PORTFOLIO MASTER PROMPT</span>
+            <button id="copyPromptBtn" class="btn-copy" type="button" aria-label="Copy prompt text to clipboard">
+              <span>📋 Copy Prompt</span>
+            </button>
+          </div>
+
+          <div class="prompt-code-area">
+            <pre id="promptText">Build a single-page personal portfolio website with a playful yet professional feel. MY DETAILS: Name: <mark>[YOUR NAME]</mark>, Tagline: <mark>[YOUR ROLE]</mark>, Bio: <mark>[2-3 sentences]</mark>, Skills: <mark>[list]</mark>, Projects: <mark>[up to 3 with name, description, link]</mark>, Contact: <mark>[email/social links]</mark>. Include Hero, About, Projects, and Contact sections. Use a light blue and dark blue color palette with white background, neomorphic soft-UI cards, clean system fonts, subtle scroll animations, and full mobile/laptop responsiveness. Keep the code lightweight and efficient.</pre>
+          </div>
+        </div>
+
+        <!-- Prompt Anatomy Breakdown -->
+        <h3 class="prompt-breakdown-title">Why This Prompt Works (Anatomy Breakdown)</h3>
+        <div class="breakdown-grid">
+          <div class="breakdown-card">
+            <h4><span aria-hidden="true">🎭 </span>Tone & Feel</h4>
+            <p><em>"Playful yet professional"</em> instructs AI to use friendly typography and clean cards instead of boring corporate tables.</p>
+          </div>
+          <div class="breakdown-card">
+            <h4><span aria-hidden="true">🎨 </span>Color & Aesthetic</h4>
+            <p><em>"Light & dark blue palette, neomorphic soft-UI"</em> prevents plain harsh colors and enforces soft shadows with modern depth.</p>
+          </div>
+          <div class="breakdown-card">
+            <h4><span aria-hidden="true">🧱 </span>Structure & Sections</h4>
+            <p><em>"Hero, About, Projects, Contact"</em> guarantees standard navigation structure without omitting critical parts.</p>
+          </div>
+          <div class="breakdown-card">
+            <h4><span aria-hidden="true">📱 </span>Technical Quality</h4>
+            <p><em>"Subtle scroll animations, full mobile responsiveness"</em> ensures it looks crisp on laptops, iPads, and phones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. TIPS & COMMON MISTAKES
+         ====================================================================== -->
+    <section id="tips" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Best Practices</span>
+          <h2 class="section-title">Tips & Common Beginner Mistakes</h2>
+          <p class="section-intro">
+            Keep these in mind to save time, conserve credits, and get the cleanest portfolio possible.
+          </p>
+        </div>
+
+        <div class="tips-mistakes-grid">
+          <!-- Do This Column -->
+          <div>
+            <h3 class="tips-col-title do"><span aria-hidden="true">✅</span> Do This</h3>
+            <div class="cards-stack">
+              <div class="tip-item-card do-card">
+                <h4>Ask for ONE change at a time</h4>
+                <p>When refining, give a single focused instruction (e.g. "change header text"). It executes faster and prevents unexpected layout bugs.</p>
+              </div>
+              <div class="tip-item-card do-card">
+                <h4>Keep your bio short and authentic</h4>
+                <p>2-3 sincere sentences about what you're learning and building resonate far better than generic buzzwords.</p>
+              </div>
+              <div class="tip-item-card do-card">
+                <h4>Preview both mobile and desktop</h4>
+                <p>Use the Lovable preview switcher to verify font sizes and button tap targets on smaller phone screens.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Avoid This Column -->
+          <div>
+            <h3 class="tips-col-title avoid"><span aria-hidden="true">⚠️</span> Avoid This</h3>
+            <div class="cards-stack">
+              <div class="tip-item-card avoid-card">
+                <h4>Don't ask for 10 changes in one prompt</h4>
+                <p>Overloading the AI in a single message often leads to hallucinations or skipped instructions, wasting your generations.</p>
+              </div>
+              <div class="tip-item-card avoid-card">
+                <h4>Don't leave placeholder text behind</h4>
+                <p>Always double check that placeholders like <code>[YOUR NAME]</code> or <code>[list]</code> were replaced with real info before publishing.</p>
+              </div>
+              <div class="tip-item-card avoid-card">
+                <h4>Don't share the editor URL instead of published link</h4>
+                <p>Make sure you click <strong>Publish</strong> and copy the public live URL, not your private project workspace link.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. FREQUENTLY ASKED QUESTIONS (FAQ Accordion)
+         ====================================================================== -->
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-intro">
+            Everything you need to know about building with Lovable AI as a student.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-1">
+              <span>Do I need any previous coding experience?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-1">
+              <p>Not at all! Lovable is specifically designed for conversational building. You describe what you need in plain English, and the AI handles all HTML, CSS, and JavaScript under the hood.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+              <span>Is Lovable AI free for students?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-2">
+              <p>Yes! Lovable offers a free plan with plenty of daily credits to build, test, refine, and publish your personal portfolio website with a shareable live URL.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+              <span>What if I make a mistake in my prompt?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-3">
+              <p>Don't worry! You can simply type a follow-up prompt like <em>"Please fix the typo in my bio to say X"</em> or <em>"Undo the last color change"</em>, and Lovable will adjust it instantly.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+              <span>Can I edit and update my website after publishing?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-4">
+              <p>Yes. Anytime you add new projects or learn new skills throughout your college semesters, you can open your Lovable project, chat with the AI to add them, and hit Publish again to update your live link.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+              <span>What do I do if Lovable gives me a design I don't like?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-5">
+              <p>Be specific in your feedback. Instead of saying "I don't like it", say <em>"Make the background white instead of dark, use rounded cards, and increase the spacing between sections."</em> Clear feedback helps the AI nail your vision.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. GET STARTED & FOOTER (Call to Action)
+         ====================================================================== -->
+    <section id="get-started" class="cta-footer-section">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="cta-headline">
+            You're One Prompt Away From Your First Website.
+          </h2>
+          <p class="cta-subtext">
+            Go open Lovable AI, paste your master prompt, and watch your story come alive! <span aria-hidden="true">🚀</span>
+          </p>
+          <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:1.1rem; padding:1rem 2.4rem;">
+            <span>Open Lovable AI & Build Now</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <footer class="site-footer">
+          <p><strong>First-Year Portfolio Workshop Guide</strong> • Interactive Teaching Platform</p>
+          <p class="footer-instructor-note">
+            Made with 💙 to empower students with zero coding background to build on the modern web.
+          </p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
